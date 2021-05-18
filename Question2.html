@@ -6,18 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500|Roboto+Slab|Material+Icons" type="text/css" />
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css" />
-        <link rel="stylesheet" href="https://geteach.com/scripts/newearth/geteachStyle1227.css" type="text/css" />
-        <script>
-            function answerClick(){
-                document.getElementById('A2show').click();
-                document.getElementById('A2go').click();
-            };
-            window.onload = function(){ 
-                document.getElementById('A1hide').click();
-                document.getElementById('A2hide').click();	
-                document.getElementById('3hide').click();					
-            }
-        </script>
+        <link rel="stylesheet" href="https://geteach.com/gti/drp/scripts/egew.css" type="text/css" />
     </head>
     <body>
         <div id="container">
@@ -43,19 +32,19 @@
                         <div class="Qtext">
                             In 2018, which country has the largest number of displaced people returning?
                         </div>
-                        <button id="buttonA" onclick="answerClick()" class="mdl-chip mdl-chip--contact">
+                        <button id="buttonA" class="mdl-chip mdl-chip--contact answerClick1">
                             <span class="mdl-chip__contact mdl-color-text--white">
                                 <span>A</span>
                             </span>
                             <span class="mdl-chip__text">Ethiopia</span>
                         </button>
-                        <button id="buttonB" onclick="answerClick()" class="mdl-chip mdl-chip--contact">
+                        <button id="buttonB" class="mdl-chip mdl-chip--contact answerClick1">
                             <span class="mdl-chip__contact mdl-color-text--white">
                                 <span>B</span>
                             </span>
                             <span class="mdl-chip__text">South Sudan</span>
                         </button>
-                        <button id="buttonC" onclick="answerClick()" class="mdl-chip mdl-chip--contact">
+                        <button id="buttonC" class="mdl-chip mdl-chip--contact answerClick1">
                             <span class="mdl-chip__contact mdl-color-text--white">
                                 <span>C</span>
                             </span>
@@ -84,6 +73,22 @@
                 </div>
             </main>
         </div>
-    </body>
+    </body>	
+	<script>
+		var answerClick1 = document.getElementsByClassName("answerClick1");
+		for (var i = 0; i < answerClick1.length; i++) {
+			answerClick1[i].addEventListener('click', answerClick, false);
+		};	
+		function answerClick(){
+			document.getElementById('A2show').click();
+			document.getElementById('A2go').click();
+		};
+		window.onload = function(){ 
+			document.getElementById('A1hide').click();
+			document.getElementById('A2hide').click();	
+			document.getElementById('A3hide').click();					
+		}
+	</script>
+    <script src="https://geteach.com/gti/drp/scripts/egew.js"></script>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 </html>
